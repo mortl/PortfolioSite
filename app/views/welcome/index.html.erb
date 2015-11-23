@@ -1,0 +1,30 @@
+
+<div class="wrapper clearfix">
+			 <div class="col-1 about homepage_content">
+			 	<h2>About Me</h2>
+			 	<hr>
+			 	<p>I'm a developer living in Toronto, Ontario, Canada.
+			 	</p>
+			 	<p>By day I work in a warehouse,but by night I'm an avid developer and student of everything.</p>
+			    <p>You can find me on posting things on Reddit, playing video games with my lovely girlfriend, and sharing code on Github.</p>
+			 </div>
+				<div class="col-2 homepage_content">					
+					<h2>Stuff I've Written</h2>
+					<hr>
+
+					<% @posts.each do |post| %>
+					<h3><a href="#"> <%= link_to post.title, post %> </a></h3>
+						<p class="date"><%=  post.created_at.strftime("%A, %b %d")%></p>
+			        <% end %>
+					
+				</div>
+				<div class="col-3 homepage_content">
+				<h2>Stuff I've Built</h2>
+				<hr>
+					<h3> <a href="#" >Immersion Capstone project </a></h3>
+					<p class="date">Friday April 10th</p>
+					<h3> <a href="#">Progress - HR Solutions </a></h3>
+					<p class="date">Friday April 10th</p>
+					
+					</div>
+			</div>	
